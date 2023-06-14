@@ -9,16 +9,19 @@ Projek ini dibuat bertujuan untuk mengembangkan alat keamanan kost dengan menggu
 ## Rangkaian Project
 | ESP8266 | Komponen    |
 | :---:   | :---: |
-| GND |  GND Sensor Ultrasonik, GND Servo, GND Sensor DS18B20, GND Relay 5V, GND LCD 16x2 I2C, GND Buzzer |
-| 5V   | VCC Sensor Ultrasonik, VCC Servo, VCC Sensor DS18B20, VCC Relay 5V, VCC LCD 16x2 I2C |
-| IO23   | TRIG PIN Sensor Ultrasonik |
-| IO19   | ECHO PIN Sensor Ultrasonik |
-| IO18   | PWM PIN Servo |
-| IO14   | DQ PIN Sensor DS18B20 |
-| IO17   | IN PIN Relay 5V |
-| IO16   | BZ_1 PIN Buzzer |
-| IO22   | SCL PIN LCD 16x2 I2C |
-| IO21  | SDA PIN LCD 16x2 I2C |
+| GND |  GND Sensor Ultrasonik, GND Servo, GND LCD 16x2 I2C, GND Sensor RFID |
+| 5V   | VCC Sensor Ultrasonik, VCC Servo, VCC LCD 16x2 I2C |
+| 3V   | 3V Sensor RFID |
+| D0   | RST Sensor RFID |
+| D6   | MISO Sensor RFID  |
+| D7   | MOSI Sensor RFID  |
+| D5   | SCK Sensor RFID |
+| D4   | SDA Sensor RFID  |
+| D1   | SDA LCD 16x2 I2C  |
+| D2   | SCL LCD 16x2 I2C  |
+| D3   | PWM PIN Servo |
+| IO10   | TRIG PIN Sensor Ultrasonik |
+| D8   | ECHO PIN Sensor Ultrasonik |
 
 ## Fitur Utama
 
