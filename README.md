@@ -4,10 +4,10 @@
 
 ## Deskripsi Project
 
-Projek ini dibuat bertujuan untuk mengembangkan alat yang dapat memonitoring akuarium ikan secara otomatis dengan menggunakan IOT (Internet Of Things) untuk mengumpulkan data suhu dan jumlah pakan di akuarium. Sistem ini dapat melakukan monitoring jumlah pakan ikan menggunakan sensor ultrasonik HC-SR04, monitoring suhu akuarium, dan menjalankan pemberian pakan ikan secara otomatis. Diharapkan dengan adanya projek ini dapat memberikan kemudahan dalam monitoring dan pemberian pakan pada akuarium secara otomatis dan dapat dikendalikan dari jarak jauh.
+Projek ini dibuat bertujuan untuk mengembangkan alat keamanan kost dengan menggunakan IOT (Internet Of Things). Sistem ini diterapkan pada pintu masuk dengan menggunakan kartu RFID, dimana sebelum memasuki kost penghuni kost harus menyiapkan kartu RFID yang sudah terdaftar pada sistem database kost kemudian discannkan ke alat yang terpasang pada pintu masuk kost sehingga pintu akan terbuka secara otomatis dan akan menutup kembali ketika penghuni kost sudah memasuki pintu masuk kost.
 
 ## Rangkaian Project
-| Mappi32 | Komponen    |
+| ESP8266 | Komponen    |
 | :---:   | :---: |
 | GND |  GND Sensor Ultrasonik, GND Servo, GND Sensor DS18B20, GND Relay 5V, GND LCD 16x2 I2C, GND Buzzer |
 | 5V   | VCC Sensor Ultrasonik, VCC Servo, VCC Sensor DS18B20, VCC Relay 5V, VCC LCD 16x2 I2C |
@@ -22,18 +22,14 @@ Projek ini dibuat bertujuan untuk mengembangkan alat yang dapat memonitoring aku
 
 ## Fitur Utama
 
-1. **Monitoring Jumlah Pakan:** Sistem ini menggunakan sensor ultrasonik HC-SR04 untuk memantau jumlah pakan yang masih tersedia, dengan menghitung jarak kedalaman dari wadah pakan ikan.
-2. **Monitoring Suhu Akuarium:** Sistem ini menggunakan sensor suhu DS18B20 yang dimasukkan kedalam air akuarium untuk memantau suhu air pada akuarium yang dimana jika suhu terlalu dingin maka penghangat akuarium akan dihidupkan.
-3. **Pemberian Pakan:** Sistem ini menggunakan servo untuk melakukan pemberian pakan ikan dimana ketika sevo dijalankan pakan akan jatuh ke akuarium. Akan tetapi jika pakan habis pemberian pakan tidak dijalankan.
-4. **Penjadwalan Pakan:** Sistem ini dapat melakukan penjadwalan pakan dengan menambahkan jadwal pemberian pakan pada sistem website yang akan berjalan sesuai dengan jam yang sudah ditentukan.
-5. **Pengaturan Jenis Ikan Pada Akuarium:** Sistem ini dapat mengatur jenis ikan apa yang ada di akuarium
-6. **Mengatur Durasi Pemberian Pakan:** Sistem ini dapat mengatur durasi pemberian pakan dengan mengubah durasi servo yang ada pada pengaturan web. 
+1. **Scan RFID Card Pada Pintu Masuk:** Fitur ini menggunakan sensor RFID untuk memindai kartu milik anggota kost / penghuni kost. Jika kartu RFID yang dimiliki anggota kost sudah terdaftar pada sistem maka gerbang kost akan terbuka, jika kartu belum terdaftar maka gerbang tidak akan terbuka.
+2. **Kelola Anggota Kost:** Sistem ini memungkinkan admin / pemilik kost untuk mendata anggota kost kemudian mendaftarkan Kode Kartu RFID ke dalam sistem database.
+3. **Monitoring Data Masuk Kost:** Sistem ini memungkinkan admin / pemilik kost untuk melihat siapa saja yang memasuki kost setelah melakukan scan kartu.
 
 ## Teknologi Yang Digunakan
 
 - **Bahasa pemrograman:** Php, JavaScript, C++, SQL
-- **Framework Website:** CodeIgniter 4
-- **Mikrokontroller:** Mappi32
+- **Mikrokontroller:** ESP8266
 - **Protokol IoT:** HTTP
 - **Database:** MySQl
-- **Komponen:** Sensor Ultrasonik HC-SR04, Sensor Suhu DS18B20, Servo, Buzzer, Relay 5V, LCD 16x2 I2C, Resistor 4.7 kΩ
+- **Komponen:** Sensor Ultrasonik HC-SR04, Sensor RFID, Servo, LCD 16x2 I2C
